@@ -11,7 +11,6 @@ public class EmpSecurity {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-
         http
                 .csrf(csrf -> csrf.disable()) // Postman ke liye important
                 .authorizeHttpRequests(auth -> auth
