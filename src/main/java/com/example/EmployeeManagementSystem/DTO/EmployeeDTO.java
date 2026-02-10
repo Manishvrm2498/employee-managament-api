@@ -13,6 +13,7 @@ public class EmployeeDTO {
     @NotBlank(message = "Department required")
     private String deptName;
 
+
     @Min(value = 1000, message = "Salary must be > 1000")
     private double salary;
 

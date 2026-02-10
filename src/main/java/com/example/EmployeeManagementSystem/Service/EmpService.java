@@ -28,6 +28,7 @@ public class EmpService {
         return empRepository.save(emp);
     }
 
+
     public Page<Employee> getEmployees(int page, int size, String sortBy) {
         Pageable pageable = PageRequest.of(page, size, Sort.by(sortBy));
         return empRepository.findAll(pageable);
