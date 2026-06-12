@@ -4,6 +4,8 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
 public class EmployeeDTO {
 
@@ -13,9 +15,10 @@ public class EmployeeDTO {
     @NotBlank(message = "Department required")
     private String deptName;
 
-
     @Min(value = 1000, message = "Salary must be > 1000")
     private double salary;
+
+    private LocalDateTime date;
 
 
 }
